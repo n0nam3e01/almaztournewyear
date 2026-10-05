@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { company } from "@/data/company";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { Icon } from "@/components/ui/Icon";
@@ -10,7 +11,7 @@ export function Guide() {
         <div className={styles.photo}>
           <Image
             src="/images/tour/aliya-portrait.webp"
-            alt="Алия — сопровождающая Almaz Tour и эксперт по Европе"
+            alt="Алия — сопровождающая Almaz Tour"
             fill
             sizes="(max-width: 780px) 100vw, 40vw"
             className={styles.portrait}
@@ -20,50 +21,37 @@ export function Guide() {
             <strong>Алия</strong>
             <Icon name="heart" />
           </div>
-          <span className={styles.photoNote}>
-            ЛИЧНЫЕ МАРШРУТЫ. ЛЮБИМЫЕ МЕСТА.
-          </span>
+          <span className={styles.photoNote}>ВЛЮБЛЯЕМ В ПУТЕШЕСТВИЯ.</span>
         </div>
         <div className={styles.text}>
-          <SectionHeading eyebrow="Давайте познакомимся">
-            «Хочу, чтобы вы
+          <SectionHeading eyebrow="Наша команда · Almaz Tour">
+            Сами путешествуем.
             <br />
-            полюбили Европу
-            <br />
-            <em>так же, как я».</em>
+            <em>Делимся опытом.</em>
           </SectionHeading>
-          <p className={styles.lead}>
-            Я Алия. Я собираю этот маршрут из мест, в которые сама возвращаюсь:
-            маленьких улиц Эльзаса, парижских кафе и вечерних каналов
-            Амстердама.
-          </p>
+          <p className={styles.lead}>{company.about.introduction}</p>
           <div className={styles.stats}>
             <div>
               <strong>
-                10 <span>лет</span>
+                <span>с </span>
+                {company.foundedYear}
               </strong>
               <p>
-                организую путешествия
+                Almaz Tour работает
                 <br />
-                по Европе
+                из Астаны
               </p>
             </div>
             <div>
-              <strong>
-                19+ <span>лет</span>
-              </strong>
+              <strong>Весь мир</strong>
               <p>
-                работаю в туризме
-                <br />и руковожу поездками
+                подбираем страну и отель
+                <br />
+                под ваш бюджет и время отпуска
               </p>
             </div>
           </div>
-          <p className={styles.description}>
-            В этой поездке я рядом с группой на всём маршруте. Помогаю с
-            переездами, размещением и вопросами по ходу путешествия. Мне
-            хочется, чтобы у вас оставалось больше времени просто наслаждаться
-            Европой.
-          </p>
+          <p className={styles.description}>{company.about.description}</p>
           <WhatsAppLink className="button button-dark">
             Познакомиться с Алией <Icon name="diagonal" />
           </WhatsAppLink>
