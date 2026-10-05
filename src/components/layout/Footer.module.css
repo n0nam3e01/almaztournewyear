@@ -150,3 +150,37 @@
 .address {
   font-size: 12px;
 }
+
+/* Christmas green material system. */
+
+.footer {
+  padding: 70px 0 30px;
+  background: var(--paper);
+}
+.grid {
+  gap: 40px;
+}
+.grid p {
+  font-size: 12px;
+}
+.grid h3 {
+  font-size: 9px;
+  color: var(--green);
+}
+.address {
+  font-size: 12px;
+}
+.grid a:not(:first-child) {
+  font-size: 12px;
+}
+.bottom {
+  font-size: 10px;
+}
+.phone svg {
+  color: var(--whatsapp);
+}
+@media (max-width: 650px) {
+  .footer {
+    padding-bottom: 110px;
+  }
+}

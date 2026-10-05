@@ -1,50 +1,44 @@
 import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { ContactButton } from "@/components/ui/ContactButton";
+import { ChristmasSprig } from "@/components/ui/ChristmasSprig";
 import { tour } from "@/data/tour";
 import { formatAmount } from "@/lib/format";
 import styles from "./Hero.module.css";
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
-      <Image
-        src="/images/tour/christmas-hero.webp"
-        alt="Рождественская ярмарка, огни и собор европейского города"
-        fill
-        preload
-        sizes="100vw"
-        className={styles.image}
-      />
-      <div className={styles.shade} />
-      <div className={`container ${styles.content}`}>
-        <div className={styles.kicker}>
-          <span className={styles.dot} />
-          АВТОРСКИЙ ТУР С АЛИЕЙ
-          <span className={styles.kickerLine} />
-          {tour.dates.toLocaleUpperCase("ru-RU")}
-        </div>
-        <h1 id="hero-title">
-          У каждого есть
-          <br />
-          своё <em>Рождество.</em>
-          <br />
-          Ваше — в Европе.
-        </h1>
-        <p className={styles.description}>
-          Три страны. Девять дней. Ярмарки, огни и маленькие
-          <br className={styles.desktopBreak} /> открытия, ради которых хочется
-          замедлиться.
-        </p>
-        <p className={styles.countries}>{tour.countries}</p>
-        <div className={styles.actions}>
-          <WhatsAppLink>
-            Хочу в это путешествие <Icon name="diagonal" />
-          </WhatsAppLink>
-          <a href="#program" className={styles.programLink}>
-            Посмотреть программу <Icon name="arrow" />
-          </a>
-        </div>
-        <div className={styles.bottom}>
+      <ChristmasSprig className={styles.sprig} />
+      <div className={styles.layout}>
+        <div className={styles.content}>
+          <div className={styles.kicker}>
+            <span className={styles.season}>
+              <Icon name="gift" />
+              CHRISTMAS EDITION
+            </span>
+            <span>{tour.dates}</span>
+          </div>
+          <p className={styles.author}>
+            ALMAZ TOUR · АВТОРСКОЕ ПУТЕШЕСТВИЕ С АЛИЕЙ
+          </p>
+          <h1 id="hero-title">
+            Ваше <em>Рождество.</em>
+            <br />В сердце
+            <br />
+            Европы.
+          </h1>
+          <p className={styles.description}>
+            Ярмарки, огни и города, похожие на открытки.
+            <br />
+            Девять дней, чтобы замедлиться и почувствовать праздник.
+          </p>
+          <p className={styles.countries}>{tour.countries}</p>
+          <div className={styles.actions}>
+            <ContactButton>Хочу в путешествие</ContactButton>
+            <a href="#program" className={styles.programLink}>
+              Посмотреть программу <Icon name="arrow" />
+            </a>
+          </div>
           <div className={styles.facts}>
             <span>
               <Icon name="calendar" />
@@ -52,35 +46,56 @@ export function Hero() {
             </span>
             <span>
               <Icon name="people" />
-              Мини-группа
+              До {tour.groupSize} человек
             </span>
             <span>
               <Icon name="train" />
-              TGV и Eurostar
+              TGV · Eurostar
             </span>
           </div>
-          <div className={styles.price}>
-            <span>Первые {tour.offerParticipants} участника</span>
-            <strong>
-              {formatAmount(tour.price)} <small>€</small>
-            </strong>
+        </div>
+        <div className={styles.postcard}>
+          <div className={styles.photo}>
+            <Image
+              src="/images/tour/christmas-hero.webp"
+              alt="Рождественская ярмарка, собор и девушка среди праздничных огней"
+              fill
+              preload
+              sizes="(max-width: 780px) 100vw, 48vw"
+              className={styles.image}
+            />
+            <span className={styles.photoBadge}>
+              <Icon name="star" />
+              Маленькие моменты. Большие воспоминания.
+            </span>
+            <div className={styles.photoRoute}>
+              <span>ОДНО ПУТЕШЕСТВИЕ. ТРИ СТРАНЫ.</span>
+              <strong>
+                Базель · Кольмар
+                <br />
+                Париж · Амстердам
+              </strong>
+              <Icon name="plane" />
+            </div>
+          </div>
+          <div className={styles.offer}>
+            <div>
+              <span>Для первых {tour.offerParticipants} участников</span>
+              <strong>
+                {formatAmount(tour.price)} <small>€</small>
+              </strong>
+            </div>
             <s>{formatAmount(tour.regularPrice)} €</s>
+            <a href="#pricing" aria-label="Узнать стоимость тура">
+              <Icon name="diagonal" />
+            </a>
           </div>
         </div>
       </div>
-      <a
-        href="#route"
-        className={styles.scroll}
-        aria-label="Перейти к маршруту"
-      >
-        <span>ИСТОРИЯ НАЧИНАЕТСЯ</span>
+      <a href="#route" className={styles.scroll}>
+        <span>НАША РОЖДЕСТВЕНСКАЯ ИСТОРИЯ</span>
         <Icon name="arrow" />
       </a>
-      <div className={styles.photoLabel}>
-        ДЕКАБРЬ В ЕВРОПЕ
-        <br />
-        <span>Когда города становятся сказкой</span>
-      </div>
     </section>
   );
 }

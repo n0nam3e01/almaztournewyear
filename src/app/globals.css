@@ -1,12 +1,19 @@
 :root {
-  --paper: #ffffff;
+  --forest: #123d28;
+  --green: #167a3f;
+  --mint: #e0f0dc;
+  --berry: #9e3543;
+  --whatsapp: #25d366;
+  --glass-fill: linear-gradient(145deg, #ffffffd9, #f5faf0b8);
+  --glass-shadow: inset 0 1px 1px white, 0 12px 40px #18452b0c;
+  --paper: #fcfdf8;
   --white: #ffffff;
-  --ink: #122b2b;
-  --muted: #65736f;
-  --gold: #e8c779;
-  --gold-dark: #87661f;
-  --line: #e1e8e6;
-  --soft: #f6f9f9;
+  --ink: #153b28;
+  --muted: #576b5c;
+  --gold: #bce6bd;
+  --gold-dark: #167a3f;
+  --line: #d5e3d2;
+  --soft: #eff6eb;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 * {
@@ -14,14 +21,14 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 112px;
+  scroll-padding-top: 132px;
 }
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body), Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -134,7 +141,7 @@ h2 em {
   font-size: 12px;
   font-weight: 600;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 999px;
   transition:
     transform 160ms var(--ease-out),
     background-color 180ms ease,
@@ -146,8 +153,8 @@ h2 em {
   flex-shrink: 0;
 }
 .button-primary {
-  color: var(--ink);
-  background: var(--gold);
+  color: var(--white);
+  background: var(--green);
 }
 .button-dark {
   color: var(--white);
@@ -181,10 +188,10 @@ h2 em {
 }
 @media (hover: hover) and (pointer: fine) {
   .button-primary:hover {
-    background: #f1d697;
+    background: #116535;
   }
   .button-dark:hover {
-    background: #254342;
+    background: #235d3d;
   }
   .button-outline:hover {
     background: var(--soft);
@@ -204,7 +211,7 @@ h2 em {
     font-size: 42px;
   }
   html {
-    scroll-padding-top: 90px;
+    scroll-padding-top: 170px;
   }
 }
 @media (max-width: 400px) {
@@ -230,5 +237,77 @@ h2 em {
   button:active,
   .button:active {
     transform: none;
+  }
+}
+
+/* Light surfaces and deep green controls share the same material language. */
+body {
+  background-image:
+    radial-gradient(ellipse at 0% 22%, #e9f3e155, transparent 30%),
+    radial-gradient(ellipse at 100% 65%, #e0f0df55, transparent 30%);
+}
+.button {
+  box-shadow:
+    inset 0 1px 1px #ffffff40,
+    0 6px 18px #153b2810;
+  min-height: 54px;
+  padding-inline: 26px;
+}
+.button-primary {
+  background: linear-gradient(135deg, #1c8648, #126336);
+  color: white;
+  border-color: #ffffff60;
+}
+.button-dark {
+  background: linear-gradient(135deg, #205d3b, #153f2a);
+  border-color: #ffffff55;
+}
+.button-outline {
+  background: #ffffffb0;
+  border-color: white;
+  color: var(--forest);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--glass-shadow);
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.section-description {
+  font-size: 14px;
+}
+.section {
+  padding-block: 92px;
+}
+.text-link {
+  font-size: 12px;
+}
+svg[data-icon="whatsapp"] {
+  color: var(--whatsapp);
+}
+@media (max-width: 780px) {
+  .section {
+    padding-block: 65px;
+  }
+  .section-description {
+    font-size: 13px;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+  .button {
+    padding-inline: 22px;
+  }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .button-outline {
+    background: white;
+    backdrop-filter: none;
+    border-color: var(--line);
+  }
+}
+@media (min-width: 781px) and (max-width: 900px) {
+  html {
+    scroll-padding-top: 170px;
   }
 }

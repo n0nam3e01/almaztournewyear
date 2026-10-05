@@ -100,6 +100,7 @@ export function Icon({
 }: SVGProps<SVGSVGElement> & { name: string }) {
   return (
     <svg
+      data-icon={name}
       width="20"
       height="20"
       viewBox="0 0 24 24"

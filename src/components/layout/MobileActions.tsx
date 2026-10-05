@@ -1,3 +1,4 @@
+import { ContactButton } from "@/components/ui/ContactButton";
 import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
 import { Icon } from "@/components/ui/Icon";
 import { tour } from "@/data/tour";
@@ -11,16 +12,19 @@ export function MobileActions() {
           <strong>{formatAmount(tour.price)} €</strong>
           <small>{tour.shortDates}</small>
         </span>
-        <WhatsAppLink className="button button-primary">
-          Хочу в тур <Icon name="whatsapp" />
-        </WhatsAppLink>
+        <ContactButton compact>Хочу в тур</ContactButton>
       </div>
       <WhatsAppLink
         className={styles.float}
         label="Написать в WhatsApp Almaz Tour"
       >
-        <Icon name="whatsapp" />
-        <span>Обсудим поездку?</span>
+        <span className={styles.whatsapp}>
+          <Icon name="whatsapp" />
+        </span>
+        <span>
+          Обсудим поездку?<small>Написать в WhatsApp</small>
+        </span>
+        <Icon name="diagonal" />
       </WhatsAppLink>
     </aside>
   );

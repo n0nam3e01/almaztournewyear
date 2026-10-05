@@ -288,3 +288,210 @@
 .extraDescription {
   font-size: 12px;
 }
+
+/* Christmas green material system. */
+
+.section {
+  background:
+    radial-gradient(ellipse at 85% 45%, #d9ebd2, transparent 65%), #edf5e8;
+  margin: 0 12px;
+  border-radius: 36px;
+}
+.layout {
+  max-width: 1160px;
+  gap: 28px;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+}
+.included {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 38px;
+  background: linear-gradient(145deg, #245f3b, #123d28 65%);
+  border: 1px solid #ffffffb0;
+  box-shadow:
+    inset 0 1px 1px #ffffff65,
+    0 16px 40px #18452b1a;
+}
+.included:before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -100px;
+  top: -150px;
+  border: 1px solid #ffffff23;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow:
+    0 0 0 28px #ffffff06,
+    0 0 0 65px #ffffff05;
+}
+.top {
+  color: #d1edce;
+  font-size: 8px;
+}
+.price {
+  padding-block: 7px;
+  gap: 25px;
+}
+.price strong {
+  font-size: 77px;
+}
+.price s {
+  font-size: 15px;
+}
+.price div {
+  font-size: 10px;
+  color: #dceadd;
+}
+.perPerson {
+  font-size: 10px;
+  color: #d4e6d3;
+}
+.included h3 {
+  font-size: 15px;
+  font-weight: 650;
+}
+.included li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #f5faf2;
+}
+.included li svg {
+  color: #8fdda7;
+  width: 19px;
+  height: 19px;
+}
+.included ul {
+  gap: 16px;
+}
+.underButton {
+  font-size: 9px;
+  color: #dceadd;
+}
+.book {
+  background: linear-gradient(130deg, #e4f3de, #cce8c7);
+  color: #15412a;
+  border-color: #fff;
+  box-shadow:
+    inset 0 1px 1px white,
+    0 8px 22px #061c1719;
+}
+.book:hover {
+  background: #e5f3df;
+}
+.extras {
+  padding: 31px;
+  background: var(--glass-fill);
+  border: 1px solid white;
+  border-radius: 30px;
+  box-shadow: var(--glass-shadow);
+}
+.extrasLabel {
+  font-size: 9px;
+}
+.extras > h3 {
+  font-size: 35px;
+}
+.extraDescription {
+  font-size: 13px;
+}
+.extra {
+  border-color: var(--line);
+  padding-block: 20px;
+}
+.extra h4 {
+  font-size: 13px;
+  font-weight: 650;
+}
+.extra h4 span {
+  font-size: 12px;
+}
+.extra p {
+  font-size: 13px;
+}
+.budgetNote {
+  background: #deeed6;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+.budgetNote span {
+  font-size: 10px;
+}
+.budgetNote p {
+  font-size: 10px;
+}
+.budgetNote strong {
+  color: var(--forest);
+  font-size: 32px;
+}
+@media (max-width: 1000px) {
+  .layout {
+    gap: 20px;
+  }
+  .included,
+  .extras {
+    padding: 28px;
+  }
+  .price strong {
+    font-size: 66px;
+  }
+}
+@media (max-width: 780px) {
+  .section {
+    margin: 0 6px;
+    border-radius: 28px;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .included,
+  .extras {
+    padding: 28px 23px;
+    border-radius: 27px;
+  }
+  .price strong {
+    font-size: 70px;
+  }
+  .included li {
+    font-size: 12px;
+  }
+  .price div {
+    font-size: 9px;
+  }
+  .top {
+    font-size: 7px;
+  }
+  .extra h4 {
+    font-size: 12px;
+  }
+  .extra p {
+    font-size: 12px;
+  }
+  .extraDescription {
+    font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  .price strong {
+    font-size: 61px;
+  }
+  .price {
+    gap: 18px;
+  }
+  .budgetNote {
+    padding: 17px;
+  }
+  .budgetNote strong {
+    font-size: 29px;
+  }
+  .price strong small {
+    font-size: 37px;
+  }
+}

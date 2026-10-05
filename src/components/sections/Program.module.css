@@ -242,3 +242,123 @@
     transition: none;
   }
 }
+
+/* Christmas green material system. */
+
+.layout {
+  gap: 60px;
+}
+.intro {
+  top: 140px;
+}
+.intro h2 {
+  font-size: 53px;
+}
+.description {
+  font-size: 14px;
+}
+.subtitle {
+  font-size: 11px;
+  color: var(--green);
+}
+.disclaimer {
+  font-size: 11px;
+}
+.day,
+.day:last-child {
+  margin-bottom: 12px;
+  border: 1px solid white;
+  border-radius: 23px;
+  background: var(--glass-fill);
+  box-shadow: var(--glass-shadow);
+  overflow: clip;
+}
+.day summary {
+  padding: 23px 24px;
+  gap: 18px;
+}
+.day[open] {
+  background: #f0f7eb;
+  border-color: #cce1c6;
+}
+.dayTitle h3 {
+  font-size: 15px;
+}
+.dayTitle > p {
+  font-size: 9px;
+  gap: 8px;
+}
+.dayNumber {
+  color: var(--green);
+  font-size: 35px;
+}
+.expand {
+  background: white;
+  border-color: white;
+  width: 36px;
+  height: 36px;
+}
+.day[open] .expand {
+  background: var(--green);
+  border-color: var(--green);
+}
+.content {
+  padding: 0 24px 24px 76px;
+}
+.item p {
+  font-size: 13px;
+}
+.item > span {
+  font-size: 10px;
+}
+.night {
+  font-size: 11px;
+}
+.night svg {
+  color: var(--green);
+}
+@media (max-width: 1050px) {
+  .layout {
+    gap: 35px;
+  }
+  .intro h2 {
+    font-size: 43px;
+  }
+}
+@media (max-width: 780px) {
+  .layout {
+    gap: 30px;
+  }
+  .intro {
+    position: static;
+  }
+  .intro h2 {
+    font-size: 43px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  .day summary {
+    padding: 20px 17px;
+    gap: 12px;
+  }
+  .dayTitle h3 {
+    font-size: 13px;
+  }
+  .dayTitle > p {
+    font-size: 8px;
+  }
+  .dayNumber {
+    font-size: 29px;
+    min-width: 30px;
+  }
+  .content {
+    padding: 0 18px 22px;
+  }
+  .disclaimer {
+    font-size: 10px;
+  }
+  .day {
+    border-radius: 20px;
+  }
+}

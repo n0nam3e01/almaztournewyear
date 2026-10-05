@@ -86,3 +86,77 @@
 .items p:not(.tag) {
   font-size: 13px;
 }
+
+/* Christmas green material system. */
+
+.layout {
+  gap: 65px;
+}
+.description {
+  font-size: 14px;
+}
+.items {
+  display: grid;
+  gap: 16px;
+}
+.items article,
+.items article:last-child {
+  border: 1px solid white;
+  border-radius: 24px;
+  background: var(--glass-fill);
+  box-shadow: var(--glass-shadow);
+  padding: 27px;
+  gap: 20px;
+}
+.icon {
+  width: 49px;
+  height: 49px;
+  min-width: 49px;
+  background: #ddefd8;
+  border-color: white;
+  border-radius: 17px;
+  color: var(--green);
+}
+.items h3 {
+  font-size: 17px;
+  font-weight: 650;
+}
+.items p:not(.tag) {
+  font-size: 13px;
+}
+.tag {
+  font-size: 9px;
+}
+.items .note {
+  font-size: 11px !important;
+}
+.items a {
+  font-size: 11px;
+}
+@media (max-width: 1050px) {
+  .layout {
+    gap: 35px;
+  }
+}
+@media (max-width: 780px) {
+  .layout {
+    gap: 10px;
+  }
+  .items article,
+  .items article:last-child {
+    padding: 22px 19px;
+    gap: 14px;
+  }
+  .icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 14px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  .items h3 {
+    font-size: 16px;
+  }
+}

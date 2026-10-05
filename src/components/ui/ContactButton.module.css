@@ -1,0 +1,118 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 58px;
+  padding: 7px 9px 7px 10px;
+  white-space: nowrap;
+  border: 1px solid #ffffff7a;
+  border-radius: 999px;
+  background: linear-gradient(130deg, #1b793f, #10592f);
+  color: white;
+  font-size: 13px;
+  font-weight: 650;
+  box-shadow:
+    inset 0 1px 1px #ffffff70,
+    0 8px 24px #145d3820;
+  transition:
+    transform 160ms var(--ease-out),
+    box-shadow 220ms ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    105deg,
+    transparent 25%,
+    #ffffff28 50%,
+    transparent 75%
+  );
+  transform: translateX(-100%);
+  transition: transform 550ms var(--ease-out);
+}
+.chat {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1fbd60;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 4px #10592f10;
+}
+.chat svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.9;
+}
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ffffff35;
+  background: #ffffff13;
+  transition:
+    transform 220ms var(--ease-out),
+    background-color 220ms ease;
+}
+.arrow svg {
+  width: 16px;
+  height: 16px;
+}
+.text {
+  padding-inline: 3px;
+}
+.compact {
+  min-height: 48px;
+  gap: 8px;
+  padding: 5px 6px;
+  font-size: 11px;
+}
+.compact .chat,
+.compact .arrow {
+  width: 32px;
+  height: 32px;
+}
+.compact .chat svg {
+  width: 20px;
+  height: 20px;
+}
+.button:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    box-shadow:
+      inset 0 1px 1px #ffffff70,
+      0 10px 28px #145d3838;
+    transform: translateY(-2px);
+  }
+  .button:hover:before {
+    transform: translateX(100%);
+  }
+  .button:hover .arrow {
+    transform: rotate(45deg);
+    background: #ffffff29;
+  }
+  .button:active {
+    transform: scale(0.97);
+  }
+}
+@media (max-width: 400px) {
+  .compact {
+    gap: 5px;
+    font-size: 10px;
+  }
+  .compact .arrow {
+    display: none;
+  }
+}

@@ -1,281 +1,478 @@
 .hero {
   position: relative;
-  min-height: 735px;
-  color: var(--white);
-  background: var(--ink);
+  isolation: isolate;
+  margin: 12px 12px 0;
+  padding: 145px 0 50px;
   overflow: hidden;
+  border-radius: 36px;
+  background:
+    radial-gradient(ellipse at 5% 25%, #e4f1df 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 70%, #d5eadb 0%, transparent 45%), #f4f8ee;
+  min-height: 860px;
 }
-.image {
-  object-fit: cover;
-  object-position: center;
-}
-.shade {
+.hero:after {
+  content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6, 21, 26, 0.86) 0%,
-      rgba(6, 21, 26, 0.64) 36%,
-      rgba(6, 21, 26, 0.1) 76%
-    ),
-    linear-gradient(0deg, rgba(6, 21, 26, 0.66), transparent 45%);
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: -1;
+}
+.layout {
+  width: min(88%, 1280px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  align-items: center;
+  gap: 55px;
 }
 .content {
   position: relative;
-  z-index: 1;
-  padding-top: 80px;
-  padding-bottom: 88px;
+  z-index: 2;
+  padding-block: 15px;
+}
+.sprig {
+  position: absolute;
+  width: 260px;
+  top: 74px;
+  left: -70px;
+  opacity: 0.32;
+  transform: rotate(-17deg);
+  pointer-events: none;
+  z-index: -1;
 }
 .kicker {
   display: flex;
+  gap: 13px;
   align-items: center;
-  gap: 12px;
+  font-size: 10px;
+  color: var(--forest);
+  flex-wrap: wrap;
+}
+.season {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: #fff9;
+  border: 1px solid white;
   font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  color: #f6e4b7;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--berry);
+  box-shadow: 0 3px 14px #376a3010;
 }
-.dot {
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  background: var(--gold);
+.season svg {
+  width: 15px;
+  height: 15px;
 }
-.kickerLine {
-  width: 30px;
-  height: 1px;
-  background: #f6e4b766;
-  margin: 0 3px;
+.author {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+  margin: 25px 0 15px;
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(53px, 5.25vw, 81px);
-  line-height: 1.03;
-  letter-spacing: -2.1px;
-  margin: 30px 0 26px;
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -2.5px;
+  font-size: clamp(58px, 5.8vw, 91px);
+  margin: 0 0 26px;
+  color: var(--forest);
 }
 .hero h1 em {
-  color: #e8c779;
   font-weight: 400;
+  color: var(--green);
+}
+.description {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 455px;
+  color: #486651;
+}
+.countries {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  color: var(--forest);
+  margin-top: 18px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+.programLink {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--forest);
+  border-bottom: 1px solid #285a3b35;
+}
+.programLink svg {
+  width: 16px;
+  transition: transform 180ms var(--ease-out);
+}
+.facts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.facts span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  border-radius: 999px;
+  background: #ffffff90;
+  border: 1px solid #fff;
+  box-shadow: inset 0 1px 1px white;
+  font-size: 10px;
+  color: var(--forest);
+}
+.facts svg {
+  width: 15px;
+  height: 15px;
+  color: var(--green);
+}
+.postcard {
+  position: relative;
+  transform: rotate(1.4deg);
+  padding: 10px;
+  background: #ffffff99;
+  border: 1px solid white;
+  border-radius: 120px 120px 30px 30px;
+  box-shadow:
+    inset 0 1px 1px white,
+    0 22px 65px #174e2920;
+  animation: postcard-in 900ms var(--ease-out) both;
+}
+.photo {
+  position: relative;
+  height: 540px;
+  border-radius: 112px 112px 22px 22px;
+  overflow: hidden;
+  background: var(--forest);
+}
+.photo:after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(0deg, #0c3028ba, transparent);
+  pointer-events: none;
+}
+.image {
+  object-fit: cover;
+  object-position: 75% center;
+}
+.photoBadge {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 75%;
+  padding: 11px 12px;
+  border-radius: 999px;
+  background: #ffffffd9;
+  border: 1px solid #fff;
+  backdrop-filter: blur(10px);
+  font-size: 9px;
+  color: var(--forest);
+  z-index: 1;
+  box-shadow: 0 6px 20px #0000000d;
+}
+.photoBadge svg {
+  width: 14px;
+  height: 14px;
+  color: var(--berry);
+  flex-shrink: 0;
+}
+.photoRoute {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  border: 1px solid #ffffff60;
+  background: #153c2c75;
+  backdrop-filter: blur(12px) saturate(130%);
+  border-radius: 20px;
+  padding: 18px 22px;
+  color: white;
+  z-index: 1;
+  box-shadow: inset 0 1px 0 #ffffff35;
+}
+.photoRoute span {
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  color: #dcefe2;
+}
+.photoRoute strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1.05;
+  margin-top: 10px;
+}
+.photoRoute > svg {
+  position: absolute;
+  right: 22px;
+  bottom: 24px;
+  width: 27px;
+  height: 27px;
+  color: #8ae7a1;
+}
+.offer {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 18px 20px 8px;
+}
+.offer > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.offer span {
+  font-size: 9px;
+  color: var(--muted);
+}
+.offer strong {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.offer small {
+  font-size: 26px;
+}
+.offer s {
+  font-size: 11px;
+  color: var(--muted);
+}
+.offer a {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffffe0;
+  background: #e2efdf;
+  border-radius: 50%;
+  color: var(--green);
+  transition: transform 180ms var(--ease-out);
+}
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: var(--muted);
+}
+.scroll svg {
+  transform: rotate(90deg);
+  width: 14px;
 }
 .kicker,
+.author,
 .hero h1,
 .description,
 .countries,
 .actions,
-.bottom {
-  animation: entrance 700ms var(--ease-out) both;
+.facts {
+  animation: copy-in 700ms var(--ease-out) both;
 }
 .hero h1 {
-  animation-delay: 50ms;
+  animation-delay: 60ms;
 }
 .description,
 .countries {
-  animation-delay: 100ms;
+  animation-delay: 110ms;
 }
 .actions,
-.bottom {
-  animation-delay: 150ms;
+.facts {
+  animation-delay: 160ms;
 }
-@keyframes entrance {
+@keyframes copy-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.description {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #e1e3df;
-  max-width: 460px;
+@keyframes postcard-in {
+  from {
+    opacity: 0.5;
+    transform: translateY(18px) rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(1.4deg);
+  }
 }
-.countries {
-  font-size: 10px;
-  letter-spacing: 1.1px;
-  margin-top: 20px;
-  color: #f3e8d3;
-}
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 29px;
-  margin-top: 30px;
-}
-.programLink {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 11px;
-  padding: 14px 0;
-  border-bottom: 1px solid #ffffff4a;
-}
-.bottom {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-top: 42px;
-}
-.facts {
-  display: flex;
-  gap: 23px;
-  font-size: 10px;
-  color: #f0eee8;
-}
-.facts span {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.facts svg {
-  color: #e8c779;
-  width: 17px;
-  height: 17px;
-}
-.price {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1px 10px;
-  border-left: 1px solid #ffffff36;
-  padding-left: 25px;
-}
-.price > span {
-  grid-column: 1/-1;
-  font-size: 9px;
-  color: #e1e3df;
-}
-.price strong {
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  white-space: nowrap;
-}
-.price small {
-  font-size: 16px;
-}
-.price s {
-  align-self: center;
-  font-size: 11px;
-  color: #c1c9c5;
-}
-.scroll {
-  position: absolute;
-  left: max(6vw, calc((100vw - 1280px) / 2));
-  bottom: 27px;
-  display: flex;
-  align-items: center;
-  gap: 17px;
-  font-size: 8px;
-  letter-spacing: 1.6px;
-}
-.scroll svg {
-  transform: rotate(90deg);
-  width: 14px;
-}
-.photoLabel {
-  position: absolute;
-  right: 6vw;
-  bottom: 31px;
-  font-size: 8px;
-  letter-spacing: 1.5px;
-  text-align: right;
-}
-.photoLabel span {
-  display: block;
-  font-size: 10px;
-  letter-spacing: 0;
-  color: #e1e3df;
-  margin-top: 5px;
+@media (hover: hover) {
+  .programLink:hover svg {
+    transform: translateX(4px);
+  }
+  .offer a:hover {
+    transform: rotate(8deg);
+  }
 }
 @media (max-width: 1100px) {
-  .hero {
-    min-height: 680px;
+  .layout {
+    gap: 28px;
+    width: 90%;
   }
-  .content {
-    padding-top: 70px;
+  .photo {
+    height: 500px;
   }
   .hero h1 {
-    font-size: 68px;
-  }
-  .bottom {
-    gap: 24px;
+    font-size: 69px;
   }
   .facts {
-    gap: 16px;
+    gap: 6px;
+  }
+  .facts span {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .hero {
+    min-height: 820px;
+  }
+  .actions {
+    gap: 13px;
   }
 }
 @media (max-width: 780px) {
   .hero {
-    min-height: 740px;
+    margin: 6px;
+    border-radius: 28px;
+    padding: 166px 0 35px;
   }
-  .shade {
-    background:
-      linear-gradient(90deg, rgba(6, 21, 26, 0.88), rgba(6, 21, 26, 0.35)),
-      linear-gradient(0deg, rgba(6, 21, 26, 0.75), transparent);
-  }
-  .image {
-    object-position: 63% center;
-  }
-  .content {
-    padding-top: 54px;
-    padding-bottom: 90px;
+  .layout {
+    width: calc(100% - 38px);
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
   .hero h1 {
-    font-size: clamp(49px, 8.6vw, 67px);
-    letter-spacing: -1.4px;
-    margin-top: 28px;
+    font-size: clamp(57px, 11vw, 79px);
+    letter-spacing: -1.8px;
+  }
+  .author {
+    font-size: 8px;
+    letter-spacing: 1px;
   }
   .kicker {
-    font-size: 8px;
-    flex-wrap: wrap;
+    font-size: 9px;
     gap: 9px;
   }
-  .kickerLine {
-    width: 15px;
+  .content {
+    padding: 0;
   }
   .description {
     font-size: 13px;
-    max-width: 350px;
+    max-width: 430px;
+  }
+  .postcard {
+    max-width: 530px;
+    width: 100%;
+    margin-inline: auto;
+    border-radius: 85px 85px 25px 25px;
+    transform: rotate(0.7deg);
+  }
+  .photo {
+    height: 430px;
+    border-radius: 78px 78px 18px 18px;
+  }
+  .photoBadge {
+    font-size: 8px;
+    top: 24px;
+    width: 82%;
+  }
+  .facts span {
+    font-size: 10px;
+    padding: 9px;
   }
   .actions {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 25px;
+    gap: 15px;
+    margin-top: 23px;
   }
-  .bottom {
-    margin-top: 30px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 24px;
+  .photoRoute {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 16px;
   }
-  .facts {
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 9px;
-  }
-  .price {
-    border-left: 0;
-    padding-left: 0;
-  }
-  .price > span {
-    font-size: 9px;
-  }
-  .price strong {
+  .photoRoute strong {
     font-size: 29px;
   }
-  .photoLabel {
-    display: none;
+  .offer {
+    padding: 15px 12px 5px;
   }
   .scroll {
-    left: 24px;
+    font-size: 7px;
+    margin-top: 28px;
   }
-  .desktopBreak {
-    display: none;
+  .sprig {
+    width: 230px;
+    top: 130px;
+    left: auto;
+    right: -90px;
+    transform: rotate(90deg);
+    opacity: 0.2;
+  }
+}
+@media (max-width: 400px) {
+  .photo {
+    height: 395px;
+  }
+  .hero h1 {
+    font-size: 59px;
+  }
+  .season {
+    font-size: 8px;
+  }
+  .kicker {
+    gap: 7px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .facts {
+    gap: 6px;
+  }
+  .facts span {
+    font-size: 9px;
+    padding: 8px;
+  }
+  .photoRoute strong {
+    font-size: 27px;
+  }
+}
+@media (min-width: 781px) and (max-width: 900px) {
+  .hero {
+    padding-top: 180px;
   }
 }

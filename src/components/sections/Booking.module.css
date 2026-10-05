@@ -89,3 +89,92 @@
     font-size: 11px;
   }
 }
+
+/* Christmas green material system. */
+
+.section {
+  margin: 0 12px;
+  border-radius: 36px;
+  background: var(--forest);
+  padding-block: 90px;
+  isolation: isolate;
+}
+.shade {
+  background: linear-gradient(90deg, #123d28f5, #123d28c4 60%, #123d2866);
+}
+.image {
+  opacity: 0.43;
+  object-position: center 60%;
+}
+.content {
+  max-width: 820px;
+  padding: 40px;
+  border: 1px solid #ffffff40;
+  border-radius: 34px;
+  background: #153d296b;
+  backdrop-filter: blur(10px) saturate(130%);
+  box-shadow:
+    inset 0 1px 1px #ffffff35,
+    0 20px 65px #00140816;
+}
+.content h2 {
+  font-size: 64px;
+}
+.content h2 em {
+  color: #b1e5b7;
+}
+.eyebrow {
+  color: #d5e9bc;
+  font-size: 9px;
+}
+.description {
+  font-size: 14px;
+  color: #e0ebdb;
+}
+.note {
+  font-size: 11px;
+  color: #e0ebdb;
+}
+.note span {
+  color: #b1e5b7;
+  font-size: 11px;
+}
+.download {
+  background: #ffffff18;
+  color: white;
+  border-color: #ffffff65;
+  box-shadow: inset 0 1px 1px #ffffff24;
+}
+.download:hover {
+  background: #ffffff2b;
+  color: white;
+}
+@media (max-width: 780px) {
+  .section {
+    margin: 0 6px;
+    border-radius: 28px;
+    padding-block: 50px;
+  }
+  .content {
+    width: calc(100% - 30px);
+    padding: 28px 22px;
+    border-radius: 26px;
+  }
+  .content h2 {
+    font-size: 47px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .actions a {
+    min-width: 0;
+    width: 100%;
+  }
+  .note {
+    font-size: 10px;
+  }
+}

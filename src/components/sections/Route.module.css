@@ -144,3 +144,91 @@
     padding-bottom: 60px;
   }
 }
+
+/* Christmas green material system. */
+
+.route {
+  border: 0;
+  background: transparent;
+}
+.stops {
+  gap: 14px;
+  margin-top: 8px;
+}
+.stops > li {
+  padding: 23px 22px;
+  border: 1px solid white;
+  border-radius: 23px;
+  background: var(--glass-fill);
+  box-shadow: var(--glass-shadow);
+}
+.marker {
+  margin-bottom: 23px;
+}
+.marker:after {
+  display: none;
+}
+.marker > span {
+  background: #ddefd8;
+  border-color: #fff;
+  color: var(--green);
+  width: 34px;
+  height: 34px;
+}
+.marker p {
+  background: transparent;
+  font-size: 8px;
+  margin-right: 0;
+  padding: 0;
+}
+.stops h3 {
+  font-size: 32px;
+}
+.date {
+  font-size: 11px;
+}
+.country {
+  font-size: 10px;
+}
+.intro {
+  font-size: 13px;
+}
+@media (max-width: 1050px) {
+  .stops > li {
+    padding: 20px 16px;
+  }
+  .marker {
+    gap: 6px;
+  }
+  .marker p {
+    font-size: 7px;
+  }
+  .stops h3 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 650px) {
+  .stops {
+    gap: 10px;
+  }
+  .stops > li {
+    padding: 17px 13px;
+    border-radius: 20px;
+  }
+  .marker {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  .marker p {
+    font-size: 6px;
+  }
+  .stops h3 {
+    font-size: 28px;
+  }
+  .country {
+    font-size: 9px;
+  }
+  .date {
+    font-size: 10px;
+  }
+}

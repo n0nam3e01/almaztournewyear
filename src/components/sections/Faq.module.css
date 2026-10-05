@@ -103,3 +103,65 @@
     transition: none;
   }
 }
+
+/* Christmas green material system. */
+
+.layout {
+  gap: 60px;
+}
+.intro > p {
+  font-size: 13px;
+}
+.questions details,
+.questions details:last-child {
+  border: 1px solid white;
+  margin-bottom: 12px;
+  border-radius: 22px;
+  background: var(--glass-fill);
+  box-shadow: var(--glass-shadow);
+  overflow: clip;
+}
+.questions summary {
+  padding: 22px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.questions summary svg {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  box-sizing: content-box;
+  background: #e1efd9;
+  border-radius: 50%;
+  color: var(--green);
+}
+.questions details[open] {
+  background: #eff7e9;
+  border-color: #cfe3c8;
+}
+.questions details > p {
+  padding: 0 24px;
+  font-size: 13px;
+  margin-bottom: 23px;
+}
+@media (max-width: 1000px) {
+  .layout {
+    gap: 35px;
+  }
+}
+@media (max-width: 780px) {
+  .layout {
+    gap: 26px;
+  }
+  .questions summary {
+    padding: 20px;
+    font-size: 13px;
+    gap: 16px;
+  }
+  .questions details > p {
+    padding: 0 20px;
+  }
+  .questions details {
+    border-radius: 20px;
+  }
+}

@@ -138,3 +138,131 @@
 .description {
   font-size: 13px;
 }
+
+/* Christmas green material system. */
+
+.guide {
+  margin: 0 12px;
+  border-radius: 36px;
+  background:
+    radial-gradient(ellipse at bottom left, #d4e9cc, transparent 60%), #eef5e9;
+}
+.layout {
+  gap: 70px;
+}
+.photo {
+  border-radius: 110px 110px 28px 28px;
+  border: 9px solid #ffffffc4;
+  box-shadow: var(--glass-shadow);
+  min-height: 660px;
+}
+.photo::after {
+  inset: 60% 0 0;
+  background: linear-gradient(0deg, #124129a0, transparent);
+}
+.signature {
+  background: #ffffffdf;
+  color: var(--forest);
+  border: 1px solid white;
+  border-radius: 22px;
+  padding: 18px 22px;
+  bottom: 58px;
+  left: 22px;
+  right: 22px;
+  backdrop-filter: blur(12px);
+}
+.signature strong {
+  font-size: 47px;
+}
+.signature svg {
+  color: var(--berry);
+  right: 22px;
+  bottom: 22px;
+}
+.signature span {
+  font-size: 10px;
+}
+.photoNote {
+  color: #e1f6df;
+  bottom: 29px;
+  left: 46px;
+  font-size: 8px;
+}
+.lead {
+  font-size: 14px;
+}
+.description {
+  font-size: 14px;
+}
+.stats {
+  background: #ffffff80;
+  border: 1px solid white;
+  border-radius: 23px;
+  padding: 23px;
+  margin: 25px 0;
+  gap: 16px;
+  box-shadow: inset 0 1px 1px white;
+}
+.stats strong {
+  font-size: 44px;
+  color: var(--green);
+  white-space: nowrap;
+}
+.stats p {
+  font-size: 11px;
+}
+@media (max-width: 1050px) {
+  .layout {
+    gap: 40px;
+  }
+  .photo {
+    min-height: 630px;
+  }
+  .stats {
+    padding: 17px;
+  }
+  .stats strong {
+    font-size: 37px;
+  }
+}
+@media (max-width: 780px) {
+  .guide {
+    margin: 0 6px;
+    border-radius: 28px;
+  }
+  .layout {
+    gap: 34px;
+  }
+  .photo {
+    min-height: 0;
+    aspect-ratio: 0.88;
+    border-width: 7px;
+    border-radius: 80px 80px 25px 25px;
+  }
+  .stats {
+    padding: 20px 16px;
+  }
+  .stats strong {
+    font-size: 36px;
+  }
+  .stats p {
+    font-size: 10px;
+  }
+  .description,
+  .lead {
+    font-size: 13px;
+  }
+  .signature {
+    left: 14px;
+    right: 14px;
+    bottom: 55px;
+    padding: 15px 20px;
+  }
+  .photoNote {
+    left: 36px;
+    font-size: 7px;
+  }
+  .text h2 {
+    font-size: 42px;
+  }
+}

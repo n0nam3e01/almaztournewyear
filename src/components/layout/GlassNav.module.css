@@ -1,0 +1,115 @@
+.nav {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(222, 239, 225, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1px 3px #174d2c0c,
+    0 3px 12px #164a2905;
+  isolation: isolate;
+}
+.links {
+  display: flex;
+  gap: 3px;
+  width: 100%;
+}
+.links > a,
+.links > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 650;
+  flex: 1;
+}
+.links a {
+  position: relative;
+  z-index: 2;
+  color: #365740;
+  border-radius: 999px;
+}
+.pill {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: var(--pill-width);
+  transform: translateX(var(--pill-left));
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1b7a40, #126036);
+  border: 1px solid #ffffff65;
+  box-shadow:
+    inset 0 1px 2px #ffffff45,
+    0 4px 12px #145b3625;
+  transition:
+    transform 280ms var(--ease-out),
+    width 280ms var(--ease-out);
+}
+.highlight {
+  position: absolute;
+  inset: 5px;
+  width: auto;
+  color: white;
+  pointer-events: none;
+  z-index: 3;
+  clip-path: inset(
+    0 calc(var(--pill-right) - 5px) 0 calc(var(--pill-left) - 5px) round 28px
+  );
+  transition: clip-path 280ms var(--ease-out);
+}
+.short {
+  display: none;
+}
+.nav[data-keyboard] .pill,
+.nav[data-keyboard] .highlight {
+  transition: none;
+}
+@media (max-width: 1100px) {
+  .links > a,
+  .links > span {
+    padding-inline: 12px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 900px) {
+  .nav {
+    width: 100%;
+    padding: 4px;
+  }
+  .links {
+    gap: 1px;
+  }
+  .links > a,
+  .links > span {
+    padding-inline: 8px;
+    min-height: 40px;
+    font-size: 11px;
+  }
+  .pill {
+    top: 4px;
+    bottom: 4px;
+  }
+  .highlight {
+    inset: 4px;
+    clip-path: inset(
+      0 calc(var(--pill-right) - 4px) 0 calc(var(--pill-left) - 4px) round 28px
+    );
+  }
+  .full {
+    display: none;
+  }
+  .short {
+    display: inline;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill,
+  .highlight {
+    transition: none;
+  }
+}
