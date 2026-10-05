@@ -1,0 +1,290 @@
+.section {
+  background: var(--soft);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 65px;
+  max-width: 1080px;
+  margin: 50px auto 0;
+  align-items: start;
+}
+.included {
+  background: var(--ink);
+  color: var(--white);
+  padding: 37px 39px 25px;
+  border-radius: 7px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  color: #e3cc96;
+}
+.top p {
+  margin-bottom: 20px;
+}
+.top span {
+  white-space: nowrap;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+.price strong {
+  font-family: var(--font-display);
+  font-size: 69px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+.price strong small {
+  font-size: 44px;
+}
+.price div {
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+  color: #ccd3cf;
+}
+.price s {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.perPerson {
+  font-size: 9px;
+  color: #ccd3cf;
+  margin: 14px 0 0;
+}
+.separator {
+  height: 1px;
+  background: #ffffff24;
+  margin-block: 28px;
+}
+.included h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.included ul {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.included li {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: #f2f1e9;
+  line-height: 1.8;
+}
+.included li svg {
+  flex-shrink: 0;
+  color: var(--gold);
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+.book {
+  width: 100%;
+  justify-content: space-between;
+}
+.underButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 8px;
+  color: #ccd3cf;
+  margin: 15px 0 0;
+}
+.underButton svg {
+  width: 12px;
+  height: 12px;
+}
+.extras {
+  padding-top: 12px;
+}
+.extrasLabel {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: var(--gold-dark);
+  margin-bottom: 12px;
+}
+.extras > h3 {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.extraDescription {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+.extra {
+  display: flex;
+  gap: 17px;
+  border-top: 1px solid #d4d6cb;
+  padding-block: 22px;
+}
+.extra > svg {
+  flex-shrink: 0;
+  color: var(--gold-dark);
+  width: 19px;
+  margin-top: 2px;
+}
+.extra > div {
+  flex: 1;
+}
+.extra h4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.extra h4 span {
+  color: var(--gold-dark);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.extra p {
+  margin-bottom: 0;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.budgetNote {
+  display: flex;
+  gap: 14px;
+  padding: 22px 24px;
+  background: #e5e5d8;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.budgetNote > svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold-dark);
+  margin-top: 4px;
+}
+.budgetNote span {
+  font-size: 9px;
+  display: block;
+}
+.budgetNote strong {
+  font-family: var(--font-display);
+  font-size: 31px;
+  font-weight: 500;
+}
+.budgetNote small {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 400;
+}
+.budgetNote p {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.8;
+  margin: 5px 0 0;
+}
+@media (max-width: 1000px) {
+  .layout {
+    gap: 35px;
+  }
+  .included {
+    padding: 30px;
+  }
+  .top {
+    flex-direction: column;
+    gap: 0;
+  }
+  .top p {
+    margin-bottom: 6px;
+  }
+  .top span {
+    margin-bottom: 17px;
+  }
+  .price {
+    gap: 18px;
+  }
+  .price strong {
+    font-size: 61px;
+  }
+  .price div {
+    font-size: 8px;
+  }
+}
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-top: 32px;
+  }
+  .included {
+    padding: 30px 25px 25px;
+  }
+  .top {
+    flex-direction: row;
+  }
+  .top p {
+    margin-bottom: 20px;
+  }
+  .price strong {
+    font-size: 66px;
+  }
+  .extras {
+    padding-top: 0;
+  }
+  .extra h4 {
+    font-size: 12px;
+  }
+  .extra p {
+    font-size: 12px;
+  }
+  .included li {
+    font-size: 12px;
+  }
+  .underButton {
+    font-size: 8px;
+  }
+}
+@media (max-width: 400px) {
+  .top {
+    flex-direction: column;
+  }
+  .top p {
+    margin-bottom: 5px;
+  }
+  .price {
+    gap: 14px;
+  }
+  .price strong {
+    font-size: 58px;
+  }
+  .price strong small {
+    font-size: 36px;
+  }
+}
+
+.included li {
+  font-size: 12px;
+}
+.extra p {
+  font-size: 12px;
+}
+.extraDescription {
+  font-size: 12px;
+}

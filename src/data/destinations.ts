@@ -1,0 +1,55 @@
+export const destinations = [
+  {
+    id: "basel",
+    name: "Базель",
+    country: "Швейцария",
+    date: "12–13 декабря",
+    label: "С этого начинается Рождество",
+    text: "Старинные площади, огни ярмарок Münsterplatz и Barfüsserplatz, прогулки у Рейна и кружка горячего швейцарского глинтвейна.",
+    highlights: ["Рождественские ярмарки", "Старый город и Рейн"],
+    image: "basel",
+    number: "01",
+  },
+  {
+    id: "colmar",
+    name: "Кольмар",
+    country: "Франция · Эльзас",
+    date: "13–15 декабря",
+    label: "Город, похожий на открытку",
+    text: "Фахверковые дома, украшенные гирляндами, каналы «Маленькой Венеции», прогулки на лодке и дегустация эльзасских вин. Две ночи, чтобы никуда не спешить.",
+    highlights: ["Маленькая Венеция", "Вина Эльзаса"],
+    image: "colmar",
+    number: "02",
+  },
+  {
+    id: "paris",
+    name: "Париж и Версаль",
+    country: "Франция",
+    date: "15–18 декабря",
+    label: "Три дня в городе света",
+    text: "Ёлка под куполом Galeries Lafayette, прогулка с гидом, вечерняя Сена и дворец Версаль. Время для Монмартра, маленьких кафе и подарков тоже останется.",
+    highlights: ["Круиз по Сене", "Билет в Версаль"],
+    image: "paris",
+    number: "03",
+  },
+  {
+    id: "amsterdam",
+    name: "Амстердам",
+    country: "Нидерланды",
+    date: "18–20 декабря",
+    label: "Огни, каналы и тёплые встречи",
+    text: "Световые инсталляции Amsterdam Light Festival с воды, улочки Йордана, голландский сыр и рождественский ужин нашей группы в конце путешествия.",
+    highlights: ["Фестиваль света", "Рождественский ужин"],
+    image: "amsterdam",
+    number: "04",
+  },
+] as const;
+
+/** CSS photo windows into the supplied slides; the original images remain intact. */
+export const photoWindows = {
+  basel: { file: "slide-04.webp", x: 1120, y: 85, width: 322, height: 830 },
+  colmar: { file: "slide-05.webp", x: 1110, y: 95, width: 332, height: 820 },
+  paris: { file: "slide-06.webp", x: 1135, y: 90, width: 240, height: 700 },
+  amsterdam: { file: "slide-07.webp", x: 1160, y: 82, width: 345, height: 825 },
+  cafe: { file: "slide-03.webp", x: 1140, y: 360, width: 185, height: 610 },
+} as const;

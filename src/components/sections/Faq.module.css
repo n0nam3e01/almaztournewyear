@@ -1,0 +1,105 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 85px;
+  align-items: start;
+}
+.intro > div {
+  margin-bottom: 24px;
+}
+.intro > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.questions details {
+  border-top: 1px solid var(--line);
+}
+.questions details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.questions summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  padding-block: 25px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.questions summary::-webkit-details-marker {
+  display: none;
+}
+.questions summary svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold-dark);
+  transition: transform 180ms var(--ease-out);
+}
+.questions details[open] svg {
+  transform: rotate(45deg);
+}
+.questions details > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  padding-right: 35px;
+  margin: 0 0 25px;
+}
+@media (max-width: 1000px) {
+  .layout {
+    gap: 45px;
+  }
+}
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .intro h2 {
+    font-size: 44px;
+  }
+  .questions summary {
+    font-size: 13px;
+    padding-block: 23px;
+  }
+  .questions details > p {
+    padding-right: 15px;
+  }
+}
+
+.questions details > p {
+  font-size: 13px;
+}
+
+/* Native details retain their keyboard behavior and progressively enhance motion. */
+@supports (interpolate-size: allow-keywords) {
+  .questions details {
+    interpolate-size: allow-keywords;
+  }
+  .questions details::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: clip;
+    transition:
+      block-size 260ms var(--ease-out),
+      opacity 180ms ease-out,
+      content-visibility 260ms;
+    transition-behavior: allow-discrete;
+  }
+  .questions details[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+  .questions details:has(summary:focus-visible)::details-content {
+    transition: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .questions details::details-content {
+    transition: none;
+  }
+}

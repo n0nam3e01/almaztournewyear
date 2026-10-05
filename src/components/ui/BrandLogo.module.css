@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  width: 172px;
+  flex-shrink: 0;
+}
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.light {
+  background: var(--paper);
+  padding: 11px 14px;
+  width: 190px;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .logo {
+    width: 140px;
+  }
+}

@@ -1,0 +1,45 @@
+.snow {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  pointer-events: none;
+  overflow: hidden;
+}
+.flake {
+  position: absolute;
+  top: -12px;
+  left: var(--x);
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+  border: 1px solid #d6e4ed;
+  border-radius: 50%;
+  opacity: 0.65;
+  animation: falling var(--duration) linear var(--delay) infinite;
+}
+@keyframes falling {
+  from {
+    transform: translate3d(0, -12px, 0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.65;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translate3d(var(--drift), calc(100dvh + 15px), 0);
+    opacity: 0;
+  }
+}
+@media (max-width: 650px) {
+  .flake:nth-child(n + 15) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snow {
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+.window {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--ink);
+}
+.image {
+  position: absolute;
+  height: auto;
+  max-width: none;
+}
