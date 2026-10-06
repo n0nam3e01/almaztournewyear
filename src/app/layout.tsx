@@ -1,17 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import {
+  Playfair_Display,
+  Montserrat,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import "./globals.css";
 import { tour } from "@/data/tour";
 import { company } from "@/data/company";
 import { formatAmount } from "@/lib/format";
-const body = Manrope({
+const body = Montserrat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-body",
   display: "swap",
 });
-const display = Cormorant_Garamond({
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  adjustFontFallback: false,
+  display: "swap",
+});
+const display = Playfair_Display({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500"],
+  weight: ["600", "700", "800"],
   style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
@@ -28,7 +38,7 @@ export const metadata: Metadata = {
     description: `${tour.dates} · ${tour.countries} · ${tour.days} дней в мини-группе.`,
   },
 };
-export const viewport: Viewport = { themeColor: "#122b2b" };
+export const viewport: Viewport = { themeColor: "#062428" };
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -36,7 +46,7 @@ export default function RootLayout({
     <html
       lang="ru"
       data-scroll-behavior="smooth"
-      className={`${body.variable} ${display.variable}`}
+      className={`${body.variable} ${display.variable} ${jakarta.variable}`}
     >
       <body>
         <a href="#main" className="skip-link">

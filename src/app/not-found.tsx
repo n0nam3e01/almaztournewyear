@@ -1,25 +1,16 @@
 import Link from "next/link";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 export default function NotFound() {
   return (
-    <main className="container section">
-      <BrandLogo />
-      <p className="eyebrow" style={{ marginTop: 70 }}>
-        404 · Немного сбились с маршрута
-      </p>
-      <h1
-        style={{
-          fontFamily: "var(--font-display)",
-          fontSize: 54,
-          fontWeight: 400,
-          lineHeight: 1.1,
-        }}
-      >
+    <main className="max-w-3xl mx-auto px-6 py-24">
+      <p className="text-brand-amber mb-4">404 · Немного сбились с маршрута</p>
+      <h1 className="font-serif text-4xl text-white mb-6">
         Этой страницы пока нет.
       </h1>
-      <p>Наше путешествие начинается на главной странице.</p>
-      <Link href="/" className="button button-dark">
-        Вернуться к путешествию
+      <p className="text-brand-moonLight/80 mb-8">
+        Наше путешествие начинается на главной странице.
+      </p>
+      <Link href="/" className="threeui-btn threeui-btn-gold">
+        <span className="threeui-btn-content">Вернуться к путешествию</span>
       </Link>
     </main>
   );

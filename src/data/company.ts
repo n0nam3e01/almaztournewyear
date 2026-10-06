@@ -28,3 +28,13 @@ export function whatsappUrl(
 ) {
   return `${company.whatsapp}&text=${encodeURIComponent(message)}`;
 }
+
+/** Context carried into WhatsApp when the visitor chooses a specific action. */
+export const contactMessages = {
+  program:
+    "Здравствуйте, Алия! Пришлите, пожалуйста, программу рождественского тура по Европе 12–20 декабря.",
+  booking:
+    "Здравствуйте, Алия! Хочу забронировать место в рождественском туре 12–20 декабря и уточнить доступность спеццены 2 200 €.",
+  question:
+    "Здравствуйте, Алия! Хочу уточнить детали рождественского тура по Европе 12–20 декабря.",
+} as const;

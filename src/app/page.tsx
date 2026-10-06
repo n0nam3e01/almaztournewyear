@@ -1,51 +1,38 @@
-import { Header } from "@/components/layout/Header";
-import { Hero } from "@/components/sections/Hero";
-import { Route } from "@/components/sections/Route";
-import { Destinations } from "@/components/sections/Destinations";
-import { Comfort } from "@/components/sections/Comfort";
-import { Program } from "@/components/sections/Program";
-import { Guide } from "@/components/sections/Guide";
-import { Logistics } from "@/components/sections/Logistics";
-import { Pricing } from "@/components/sections/Pricing";
-import { Faq } from "@/components/sections/Faq";
-import { Booking } from "@/components/sections/Booking";
-import { Footer } from "@/components/layout/Footer";
-import { MobileActions } from "@/components/layout/MobileActions";
-import { Reveal } from "@/components/ui/Reveal";
+import { Header } from "@/components/reference/Header";
+import { Hero } from "@/components/reference/Hero";
+import { Comparison } from "@/components/reference/Comparison";
+import { TravelSupport } from "@/components/reference/TravelSupport";
+import { Route } from "@/components/reference/Route";
+import { Program } from "@/components/reference/Program";
+import { Company } from "@/components/reference/Company";
+import { Pricing } from "@/components/reference/Pricing";
+import { Faq } from "@/components/reference/Faq";
+import { FinalContact } from "@/components/reference/FinalContact";
+import { Footer } from "@/components/reference/Footer";
+import { ContactDock } from "@/components/reference/ContactDock";
 import { Snowfall } from "@/components/ui/Snowfall";
 export default function Home() {
   return (
     <>
+      <div
+        className="ambient-aurora fixed inset-0 pointer-events-none"
+        aria-hidden="true"
+      />
       <Snowfall />
       <Header />
       <main id="main">
         <Hero />
-        <Reveal>
-          <Route />
-        </Reveal>
-        <Reveal>
-          <Destinations />
-        </Reveal>
-        <Reveal>
-          <Comfort />
-        </Reveal>
+        <Comparison />
+        <TravelSupport />
+        <Route />
         <Program />
-        <Reveal>
-          <Guide />
-        </Reveal>
-        <Reveal>
-          <Logistics />
-        </Reveal>
-        <Reveal>
-          <Pricing />
-        </Reveal>
+        <Company />
+        <Pricing />
         <Faq />
-        <Reveal>
-          <Booking />
-        </Reveal>
+        <FinalContact />
       </main>
       <Footer />
-      <MobileActions />
+      <ContactDock />
     </>
   );
 }
