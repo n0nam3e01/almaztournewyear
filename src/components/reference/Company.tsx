@@ -1,3 +1,4 @@
+import { cityPhotos } from "@/data/photos";
 import Image from "next/image";
 import { referenceCopy as copy } from "@/data/reference-copy";
 import { company, whatsappUrl, contactMessages } from "@/data/company";
@@ -14,11 +15,11 @@ export function Company() {
             <div className="relative mx-auto max-w-sm sm:max-w-md rounded-3xl p-3 bg-gradient-to-b from-brand-amber/40 via-white/10 to-brand-gold/40 border border-brand-amber/40 shadow-2xl">
               <div className="overflow-hidden rounded-2xl relative aspect-[3/4] bg-[#0A3A40]">
                 <Image
-                  src="/images/tour/aliya-portrait.webp"
-                  alt="Алия — сопровождающая рождественского тура Almaz Tour"
+                  src={cityPhotos.colmar.src}
+                  alt={cityPhotos.colmar.alt}
                   className="w-full h-full object-cover object-top filter brightness-[1.02]"
-                  width={1024}
-                  height={1365}
+                  width={cityPhotos.colmar.width}
+                  height={cityPhotos.colmar.height}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#062428]/80 via-transparent to-transparent"></div>
               </div>

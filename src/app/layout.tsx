@@ -27,14 +27,14 @@ const display = Playfair_Display({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: `${tour.name} с Алией · ${tour.dates} | ${company.name}`,
-  description: `Авторский тур ${company.name}: Базель, Кольмар, Париж, Версаль и Амстердам. ${tour.days} дней, ${tour.nights} ночей, поезда TGV и Eurostar, сопровождение Алии. От ${formatAmount(tour.price)} €.`,
+  title: `${tour.name} · ${tour.dates} | ${company.name}`,
+  description: `Авторский тур ${company.name}: Базель, Кольмар, Париж, Версаль и Амстердам. ${tour.days} дней, ${tour.nights} ночей, поезда TGV и Eurostar, сопровождение на всём маршруте. От ${formatAmount(tour.price)} €.`,
   icons: { icon: "/images/brand/almaz-tour-icon.png" },
   openGraph: {
     type: "website",
     locale: "ru_RU",
     siteName: "Almaz Tour",
-    title: "Рождественская Европа с Алией",
+    title: "Авторский рождественский тур",
     description: `${tour.dates} · ${tour.countries} · ${tour.days} дней в мини-группе.`,
   },
 };

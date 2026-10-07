@@ -45,7 +45,7 @@ export function Pricing() {
             </ul>
             <WhatsAppLink
               className={`button button-primary ${styles.book}`}
-              message={`Здравствуйте, Алия! Хочу узнать, доступна ли цена ${formatAmount(tour.price)} € на рождественский тур ${tour.shortDates}, и забронировать место.`}
+              message={`Здравствуйте! Хочу узнать, доступна ли цена ${formatAmount(tour.price)} € на рождественский тур ${tour.shortDates}, и забронировать место.`}
             >
               Узнать о местах в группе <Icon name="diagonal" />
             </WhatsAppLink>

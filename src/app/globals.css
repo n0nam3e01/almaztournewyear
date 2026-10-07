@@ -2617,7 +2617,3 @@ body {
     margin-left: 0 !important;
   }
 }
-
-img[src*="colmar.webp"] {
-  object-position: 50% 70%;
-}

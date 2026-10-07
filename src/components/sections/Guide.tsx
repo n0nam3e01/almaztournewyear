@@ -10,15 +10,15 @@ export function Guide() {
       <div className={`container ${styles.layout}`}>
         <div className={styles.photo}>
           <Image
-            src="/images/tour/aliya-portrait.webp"
-            alt="Алия — сопровождающая Almaz Tour"
+            src="/images/cities/colmar-winter.webp"
+            alt="Зимний Кольмар: рождественский маршрут"
             fill
             sizes="(max-width: 780px) 100vw, 40vw"
             className={styles.portrait}
           />
           <div className={styles.signature}>
-            <span>Ваша сопровождающая</span>
-            <strong>Алия</strong>
+            <span>Авторский рождественский тур</span>
+            <strong>Almaz Tour</strong>
             <Icon name="heart" />
           </div>
           <span className={styles.photoNote}>ВЛЮБЛЯЕМ В ПУТЕШЕСТВИЯ.</span>
@@ -53,7 +53,7 @@ export function Guide() {
           </div>
           <p className={styles.description}>{company.about.description}</p>
           <WhatsAppLink className="button button-dark">
-            Познакомиться с Алией <Icon name="diagonal" />
+            Узнать об авторском туре <Icon name="diagonal" />
           </WhatsAppLink>
         </div>
       </div>

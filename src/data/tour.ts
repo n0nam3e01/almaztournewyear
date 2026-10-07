@@ -1,6 +1,6 @@
 /** Tour terms from slides 1, 8, 9, 10. Reference itinerary: HappyTour. */
 export const tour = {
-  name: "Рождественская Европа",
+  name: "Авторский рождественский тур",
   dates: "12–20 декабря 2026",
   shortDates: "12–20 декабря",
   days: 9,
@@ -13,7 +13,7 @@ export const tour = {
   price: 2200,
   regularPrice: 2350,
   offer: "Специальная цена для первых 3 участников",
-  guide: "Алия",
+  guide: "Сопровождение на маршруте",
   presentation: "/documents/almaz-tour-christmas.pptx",
   included: [
     "8 ночей в европейских отелях с завтраками",

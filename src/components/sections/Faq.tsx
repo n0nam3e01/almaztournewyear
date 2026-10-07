@@ -18,7 +18,7 @@ export function Faq() {
           <p>
             Не нашли свой вопрос?
             <br />
-            Напишите Алие, она поможет разобраться.
+            Напишите в Almaz Tour — поможем разобраться.
           </p>
           <WhatsAppLink className="text-link">
             Задать свой вопрос <Icon name="arrow" />
